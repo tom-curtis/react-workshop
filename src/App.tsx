@@ -4,7 +4,6 @@ import type { ExerciseNavItem } from '@/infra/components/AppShell'
 import { AppShell } from '@/infra/components/AppShell'
 import WorkbookContent from '@/infra/components/WorkbookContent'
 import { ExerciseModal } from '@/infra/components/ExerciseModal'
-
 import { useExerciseUrlState } from '@/infra/hooks/useExerciseUrlState'
 import Ex1RecipeGallery from '@/exercises/Ex1RecipeGallery'
 import Ex2MoodTracker from '@/exercises/Ex2MoodTracker'
@@ -84,7 +83,7 @@ export default function App() {
                     activeMeta && {
                         id: activeMeta.id,
                         title: activeMeta.title,
-                        subtitle: activeMeta.description ?? '',
+                        description: activeMeta.description ?? '',
                     }
                 }
                 open={activeId !== null}
