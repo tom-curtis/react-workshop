@@ -18,6 +18,8 @@ import {
     DropdownItem,
 } from '@heroui/react'
 
+import ThemeSwitcher from '@/infra/components/ThemeSwitcher.tsx'
+
 type AppShellProps = {
     exercises: ExerciseNavItem[]
     activeExerciseId?: number | null
@@ -35,7 +37,11 @@ export function AppShell({ exercises, activeExerciseId, onOpenExercise, children
                         {/* Logos */}
                         <div className="flex items-center gap-1">
                             <img alt="React logo" className="h-12 w-12" src="/react.svg" />
-                            <img alt="Hacksmiths logo" className="h-16 w-16 " src="/hack.svg" />
+                            <img
+                                alt="Hacksmiths logo"
+                                className="h-16 w-16 dark:invert"
+                                src="/hack.svg"
+                            />
                         </div>
 
                         {/* Text */}
@@ -51,6 +57,10 @@ export function AppShell({ exercises, activeExerciseId, onOpenExercise, children
                 </NavbarBrand>
 
                 <NavbarContent className="gap-3" justify="end">
+                    <NavbarItem>
+                        <ThemeSwitcher />
+                    </NavbarItem>
+
                     {exercises.length > 0 && (
                         <NavbarItem>
                             <Dropdown placement="bottom-end">
@@ -93,19 +103,7 @@ export function AppShell({ exercises, activeExerciseId, onOpenExercise, children
                 </NavbarContent>
             </Navbar>
 
-            <main className="mx-auto max-w-4xl px-3 py-6">
-                {activeExercise === null ? (
-                    <div className="flex flex-col items-start gap-2 text-sm text-default-500">
-                        <p className="font-medium text-default-600">Welcome 👋</p>
-                        <p>
-                            Pick an exercise from the top-right menu to get started. You’ll
-                            implement the logic in the editor below.
-                        </p>
-                    </div>
-                ) : (
-                    children
-                )}
-            </main>
+            <main className="mx-auto max-w-4xl px-3 py-6">{children}</main>
         </div>
     )
 }

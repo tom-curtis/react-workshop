@@ -1,10 +1,11 @@
 // src/App.tsx
-import type { ExerciseNavItem } from './infra/ui/AppShell'
+import type { ExerciseNavItem } from '@/infra/components/AppShell'
 
-import { AppShell } from './infra/ui/AppShell'
-import WorkbookContent from './infra/ui/WorkbookContent'
-import { ExerciseModal } from './infra/ui/ExerciseModal'
-import { useExerciseUrlState } from './infra/useExerciseUrlState'
+import { AppShell } from '@/infra/components/AppShell'
+import WorkbookContent from '@/infra/components/WorkbookContent'
+import { ExerciseModal } from '@/infra/components/ExerciseModal'
+
+import { useExerciseUrlState } from './infra/hooks/useExerciseUrlState.ts'
 
 // NEW EXERCISES
 import Ex1RecipeGallery from './exercises/Ex1RecipeGallery'
