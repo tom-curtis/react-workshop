@@ -5,15 +5,13 @@ import { AppShell } from '@/infra/components/AppShell'
 import WorkbookContent from '@/infra/components/WorkbookContent'
 import { ExerciseModal } from '@/infra/components/ExerciseModal'
 
-import { useExerciseUrlState } from './infra/hooks/useExerciseUrlState.ts'
-
-// NEW EXERCISES
-import Ex1RecipeGallery from './exercises/Ex1RecipeGallery'
-import Ex2MoodTracker from './exercises/Ex2MoodTracker'
-import Ex3EventRegistrationForm from './exercises/Ex3EventRegistrationForm'
-import Ex4ProductFilter from './exercises/Ex4ProductFilter'
-import Ex5UserPreferences from './exercises/Ex5UserPreferences'
-import Ex6NotificationCenter from './exercises/Ex6NotificationCenter'
+import { useExerciseUrlState } from '@/infra/hooks/useExerciseUrlState'
+import Ex1RecipeGallery from '@/exercises/Ex1RecipeGallery'
+import Ex2MoodTracker from '@/exercises/Ex2MoodTracker'
+import Ex3EventRegistrationForm from '@/exercises/Ex3EventRegistrationForm'
+import Ex4ProductFilter from '@/exercises/Ex4ProductFilter'
+import Ex5UserPreferences from '@/exercises/Ex5UserPreferences'
+import Ex6NotificationCenter from '@/exercises/Ex6NotificationCenter'
 
 const exercises: ExerciseNavItem[] = [
     {

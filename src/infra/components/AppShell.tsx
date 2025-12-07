@@ -18,7 +18,7 @@ import {
     DropdownItem,
 } from '@heroui/react'
 
-import ThemeSwitcher from '@/infra/components/ThemeSwitcher.tsx'
+import ThemeSwitcher from '@/infra/components/ThemeSwitcher'
 
 type AppShellProps = {
     exercises: ExerciseNavItem[]
