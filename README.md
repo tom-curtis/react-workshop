@@ -143,12 +143,6 @@ This project uses:
 * **HeroUI (@heroui/react)** — components and theme tokens
 * **Tailwind CSS** — utility-first styling, with dark mode support
 
-Dark mode is handled using Tailwind’s `dark:` variants.
-Inline SVGs can use HeroUI color tokens:
-
-```tsx
-className="fill-default-900 dark:fill-default-100"
-```
 
 # 🧪 Requirements
 

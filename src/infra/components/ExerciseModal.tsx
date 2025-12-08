@@ -1,12 +1,13 @@
 import type { ExerciseNavItem } from '@/infra/components/AppShell'
+import type { ReactNode } from 'react'
 
-import { Modal, ModalContent, ModalHeader, ModalBody, Button } from '@heroui/react'
+import { Modal, ModalContent, ModalHeader, ModalBody } from '@heroui/react'
 
 type Props = {
     open: boolean
     exercise: ExerciseNavItem | null
     onClose: () => void
-    children: React.ReactNode
+    children: ReactNode
 }
 
 export function ExerciseModal({ open, exercise, onClose, children }: Props) {
@@ -35,9 +36,6 @@ export function ExerciseModal({ open, exercise, onClose, children }: Props) {
                                     {exercise?.description}
                                 </div>
                             </div>
-                            <Button size="sm" variant="light" onPress={onClose}>
-                                Close
-                            </Button>
                         </ModalHeader>
                         <ModalBody className="pb-4">{children}</ModalBody>
                     </>

@@ -287,9 +287,6 @@ export default function WorkbookContent() {
                                     {activeConcept === 'effects' &&
                                         'useEffect & side effects – demo'}
                                 </div>
-                                <Button size="sm" variant="light" onPress={closeConcept}>
-                                    Close
-                                </Button>
                             </ModalHeader>
                             <ModalBody className="pb-4">
                                 <ConceptDemo activeConcept={activeConcept} />

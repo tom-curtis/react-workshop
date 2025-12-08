@@ -1,4 +1,3 @@
-// src/App.tsx
 import type { ExerciseNavItem } from '@/infra/components/AppShell'
 
 import { AppShell } from '@/infra/components/AppShell'
